@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FCF6F2"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:layout_marginTop="40sp"
+                android:textSize="36sp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hey, Let's Start Practicing.."
+                android:textColor="@color/black"
+                android:textStyle="bold|normal"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif-medium"/>
+
+
+
+
+            <EditText
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:id="@+id/inputtext"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="15dp"
+                android:textSize="19sp"
+                android:layout_gravity="center"
+                android:layout_above="@+id/sayit"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:gravity="start|top"
+                android:hint="Enter Text"
+                android:inputType="textMultiLine"
+                />
+
+
+
+            <Button
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:id="@+id/sayit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:backgroundTint="#ffffff"
+                android:text="Say it for me"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toTopOf="@+id/mic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_marginTop="60dp"
+                android:layout_gravity="center"
+                android:id="@+id/mic"
+                android:layout_width="91dp"
+                android:layout_height="85dp"
+                android:layout_marginBottom="29dp"
+                app:layout_constraintBottom_toTopOf="@+id/speechrecognised"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@android:drawable/ic_btn_speak_now"
+                tools:ignore="MissingConstraints"
+                app:tint="#000" />
+
+            <TextView
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:id="@+id/speechrecognised"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Tap on Mic to Speak"
+                android:textStyle="italic"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/accuracy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:id="@+id/accuracy"
+                android:textColor="#000000"
+                android:textAllCaps="false"
+                android:backgroundTint="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check Pronunciation Accuracy"
+                app:layout_constraintBottom_toTopOf="@+id/accuracyPoint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:id="@+id/accuracyPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:textSize="25sp"
+                android:text="Accuracy Score 1-100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="-1dp" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="-1dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="822dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="-1dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
